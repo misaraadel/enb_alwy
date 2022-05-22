@@ -1774,6 +1774,7 @@ footer .content p {
   font-weight: 500;
   line-height: 1.8rem;
   margin: 20px 0px;
+  text-align: center;
 }
 
 footer .content .socail-media {
@@ -1876,7 +1877,7 @@ footer .content .socail-media li:last-child {
     width: 100px;
     height: 100px;
     background: url("../images/icon.png") center/contain no-repeat;
-    bottom: 0;
+    bottom: 30px;
     left: 0;
     z-index: -1;
     opacity: .3;
@@ -1945,6 +1946,10 @@ footer .content .socail-media li:last-child {
   }
   .projects .box p {
     font-size: 12px !important;
+  }
+  .message::after {
+    height: 50px;
+    width: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
