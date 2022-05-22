@@ -1,0 +1,127 @@
+@media (max-width: 999px) {
+  .navbar {
+    .hamburger {
+      display: block !important;
+    }
+
+    .navbar-nav {
+      width: 100%;
+      padding: 5px 0px;
+      flex-direction: column !important;
+      justify-content: flex-start !important; 
+      align-items: flex-start !important;
+      align-content: flex-start !important;
+      position: absolute;
+      right: -100% !important;
+      top: 69px;
+      height: calc(100vh - 69px);
+      background-color: #fff;
+      z-index: 99;
+      transition: all .3s linear;
+
+      &.active-nav {
+        right: 0px !important;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: url('../images/icon.png') center / contain no-repeat;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        opacity: .3;
+      }
+
+      li {
+        width: 100%;
+        padding: 10px 0px;
+        border-bottom: 1px solid #ddd;
+
+        &:last-child {
+          border: 0px;
+        }
+
+        .nav-link {
+          width: 100%;
+
+          &::after {
+            display: none;
+          }
+
+          &.active, &:hover {
+            color: #477496 !important;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .owl-theme .owl-nav.disabled + .owl-dots {
+      display: none;
+    }
+
+    img {
+      height: 130px !important;
+    }
+  }
+
+  .about {
+    iframe {
+      height: 175px !important;
+    }
+
+    h1 {
+      font-size: 20px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .heading {
+      font-size: 17px !important;
+    }
+
+    p {
+      font-size: 13px !important;
+      text-align: justify !important;
+    }
+
+    .list {
+      margin-top: 10px !important;
+
+      li {
+        margin-bottom: 7px !important;
+      }
+    }
+  }
+
+  .mobile-order-1 {
+    order: 1 !important;
+  }
+
+  .mobile-order-0 {
+    order: 0 !important;
+  }
+
+  .heading-shape {
+    h1 {
+      font-size: 18px !important;
+    }
+
+    p {
+      font-size: 13px !important;
+    }
+  }
+
+  .projects .box {
+    img {
+      height: 140px !important;
+    }
+
+    p {
+      font-size: 12px !important;
+    }
+  }
+}
