@@ -1,9 +1,4 @@
 $(document).ready(function () {
-    window.addEventListener("load", function () {
-        const loader = document.querySelector(".loader");
-        loader.className += " hidden";
-    });
-
     $(window).scroll(function () {
         if ($(this).scrollTop() > 700) {
             $(".scroll-top-button").fadeIn();
@@ -29,6 +24,12 @@ $(document).ready(function () {
         $('.hamburger').toggleClass('active');
         $('.navbar-nav').toggleClass('active-nav');
         $('body').toggleClass('overflowNone')
+    });
+
+    $('.navbar-nav .nav-item .nav-link').click(function(){
+        $('.hamburger').removeClass('active');
+        $('.navbar-nav').removeClass('active-nav');
+        $('body').removeClass('overflowNone')
     });
 
     $('.owl-header').owlCarousel({
@@ -141,6 +142,37 @@ $(document).ready(function () {
             },
             1000:{
                 items:6
+            }
+        }
+    });
+
+    $('.owl-testmonaials').owlCarousel({
+        rtl: true,
+        loop:true,
+        margin: 0,
+        nav:false,
+        dots: true,
+        autoplay: true,
+        touchDrag  : true,
+		mouseDrag  : true,
+		autoWidth: false,
+		animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplayTimeout: 6000,
+		smartSpeed: 2000,
+		dragEndSpeed: 2000,
+		slidSpeed: 900,
+        paginationSpeed: 900,
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:4
             }
         }
     });
